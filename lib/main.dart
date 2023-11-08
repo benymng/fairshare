@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         title: 'Fairshare',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 0, 255, 72)),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 221, 146, 170)),
         ),
         home: MyHomePage(),
       ),
@@ -40,11 +42,37 @@ class MyHomePage extends StatelessWidget {
     var appState = context.watch<MyAppState>();
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_a_photo_outlined),
+        onPressed: () {
+          print("presssed");
+      }),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",  
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "Settings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.photo_album),
+            label: "Reciept Photos",
+          ),
+        ],
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
+        title: const Text("Faire Share"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Hello world'),
+            Icon(Icons.verified),
+            Container(margin: EdgeInsets.all(20), child: Text("hello world")),
             TestWidget(appState: appState),
             ElevatedButton(
               onPressed: () {
@@ -82,3 +110,4 @@ class TestWidget extends StatelessWidget {
     );
   }
 }
+

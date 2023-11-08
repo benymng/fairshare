@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
 options: "08745228a226eecef09e66095ae90e65b02d5de9c7a6b80d87f264c2d0fa2004"
-build_start_time: [1696121894, 607899000]
-build_end_time: [1696121903, 22199000]
+build_start_time: [1696124404, 487902000]
+build_end_time: [1696124406, 53181000]
 inputs:
-  "/Users/ben/Documents/programming/fairshare/macos/Flutter/GeneratedPluginRegistrant.swift": [1696121877, 454231023]
+  "/Users/ben/Documents/programming/fairshare/macos/Flutter/GeneratedPluginRegistrant.swift": [1696124398, 73289095]
   "/Users/ben/Documents/programming/fairshare/macos/Runner/AppDelegate.swift": [1695832098, 0]
   "/Users/ben/Documents/programming/fairshare/macos/Runner/MainFlutterWindow.swift": [1695832098, 0]
