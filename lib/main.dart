@@ -12,7 +12,7 @@ Future<List<User>> fetchUsers() async {
     var uri = Uri.http('127.0.0.1:8000', '/get_users/');
     final response = await client.get(uri);
     if (response.statusCode == 200) {
-      debugPrint('movieTitle: ${response.body}');
+      debugPrint('data: ${response.body}');
       List<dynamic> list = jsonDecode(response.body);
       return list
           .map((data) => User.fromJson(data as Map<String, dynamic>))
